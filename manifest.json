@@ -1,6 +1,7 @@
 {
   "name": "Zip2 PH - Physics Toolkit",
   "short_name": "Zip2PH",
+  "description": "Physics calculator for v = u + at. Built in Port Harcourt. From equations to orbit.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
