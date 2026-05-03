@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zip2 PH - Physics Toolkit</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#8b5cf6">
+</head>
+<body>
+  <h1>Mathias Musk Calculator</h1>
+  <h2>v = u + at</h2>
+  <p>From Port Harcourt to Space</p>
+  
+  <input id="u" placeholder="u = initial velocity" type="number">
+  <input id="a" placeholder="a = acceleration" type="number">
+  <input id="t" placeholder="t = time" type="number">
+  <button onclick="calc()">Calculate v</button>
+  
+  <h2 id="answer">v = ?</h2>
+  
+  <script>
+    function calc(){
+      let u = Number(document.getElementById('u').value)
+      let a = Number(document.getElementById('a').value)
+      let t = Number(document.getElementById('t').value)
+      let v = u + a*t
+      document.getElementById('answer').innerText = "v = " + v + " m/s"
+    }
+  </script>
+</body>
+</html>
