@@ -1,4 +1,5 @@
-name: Build Android APK
+          printf "com.mathiasmusk.zip2ph\nZip2PH\nhttps://mathiasmusk0.github.io\n#8B5CF6\n\n\n\n" | bubblewrap init --manifest=https://mathiasmusk0.github.io/manifest.json
+          bubblewrap build     
 on:
   push:
     branches: [ main ]
@@ -20,8 +21,7 @@ jobs:
         
                - name: Build APK
         run: |
-          printf "com.mathiasmusk.zip2ph\nZip2PH\nhttps://mathiasmusk0.github.io\n#8B5CF6\n\n\n\n" | bubblewrap init --manifest=https://mathiasmusk0.github.io/manifest.json
-          bubblewrap build
+         
           
       - name: Upload APK
         uses: actions/upload-artifact@v4
