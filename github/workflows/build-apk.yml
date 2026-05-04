@@ -1,0 +1,30 @@
+name: Build Android APK
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install Bubblewrap
+        run: npm i -g @bubblewrap/cli
+        
+      - name: Build APK
+        run: |
+          printf "com.mathiasmusk.zip2ph\nZip2PH\nhttps://mathiasmusk0.github.io\n#8B5CF6\n\n\n\n" | bubblewrap init --manifest=https://mathiasmusk0.github.io/manifest.json
+          bubblewrap build
+          
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zip2PH-APK
+          path: app-release-signed.apk
