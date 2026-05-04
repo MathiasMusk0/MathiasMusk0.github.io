@@ -27,4 +27,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Zip2PH-APK
-          path: app-release-signed.apk
+          path: app-release-signed.apk.
